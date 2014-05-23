@@ -1,0 +1,107 @@
+/*
+==========================================================================
+=== Theme: Default Responsive Theme
+=== By: Laszlo Kruchio at Ebow
+=== Website: http://ebow.ie
+=== Version: 1.0
+=== For: 
+=== Last Edit: 
+========================================================================== 
+*/
+
+
+/*
+===========================================================================
+=== ALL ===================================================================
+===========================================================================
+*/
+
+	/* Basics */
+	.mobile_only {display:none;}
+	.tablet_only {display:none;}
+	.small_tablet_only {display:none;}
+	.responsive_only {display:none;}
+	.desktop_only {display:block;}
+	.hide_on_desktop {display:none;}
+	.hide_on_mobile {display:block;}
+	.hide_on_tablet {display:block;}
+
+/*
+===========================================================================
+=== BIG SCREEN ONLY =======================================================
+===========================================================================
+*/
+
+@media only screen and (min-width: 1023px) {
+	
+	/* Basics */
+	.mobile_only {display:none;}
+	.tablet_only {display:none;}
+	.responsive_only {display:none;}
+	.hide_on_mobile {display:block;}
+	.hide_on_tablet {display:block;}
+		
+}
+
+/*
+===========================================================================
+=== TABLET ONLY ===========================================================
+===========================================================================
+*/
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+	
+	/* Basics */
+	.mobile_only {display:none;}
+	.tablet_only {display:block;}
+	.responsive_only {display:block;}
+	.desktop_only {display:none;}
+	.hide_on_desktop {display:block;}
+	.hide_on_mobile {display:block;}
+	.hide_on_tablet {display:none;}
+		
+}
+
+/*
+===========================================================================
+=== PHONE ONLY /LANDSCAPE/ ================================================
+===========================================================================
+*/
+
+@media only screen and (max-width: 767px) {
+
+	/* Basics */
+	.mobile_only {display:block;}
+	.tablet_only {display:none;}
+	.responsive_only {display:block;}
+	.desktop_only {display:none;}
+	.hide_on_desktop {display:block;}
+	.hide_on_mobile {display:none;}
+	.hide_on_tablet {display:block;}
+	.hide_on_small_tablet {display:none;}
+	.small_tablet_only {display:block;}
+	  	
+}
+
+/*
+===========================================================================
+=== PHONE ONLY /PORTRAIT/ =================================================
+===========================================================================
+*/
+
+@media only screen and (max-width: 460px) {
+	
+	/* Basics */
+	.mobile_only {display:block;}
+	.tablet_only {display:none;}
+	.responsive_only {display:block;}
+	.desktop_only {display:none;}
+	.hide_on_desktop {display:block;}
+	.hide_on_mobile {display:none;}
+	.hide_on_tablet {display:block;}
+	.hide_on_small_tablet {display:block;}
+	.small_tablet_only {display:none;}
+				
+}
+
+
