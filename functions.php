@@ -15,6 +15,8 @@ function theme_styles() {
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
 
+
+/* NEW COMMENT LINE */
 /* Load the theme scripts */
 function theme_scripts() { 
 	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js' ); // Include jQuery
