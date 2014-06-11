@@ -1,4 +1,11 @@
 <?php
+/* Add a Favicon to the Site */
+add_action( 'wp_head', 'mytheme_add_favicon' );
+add_action('admin_head', 'mytheme_add_favicon');
+function mytheme_add_favicon() {
+    echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_stylesheet_directory_uri() . '/favicon.ico" />';
+}
+
 /* Show Page Template */
 add_action('wp_head', 'show_template');
 function show_template() {
@@ -33,12 +40,6 @@ function theme_scripts() {
 	wp_enqueue_script('custom');
 }
 add_action('wp_enqueue_scripts', 'theme_scripts'); 
-
-/* Add a Favicon to the Site */
-add_action( 'wp_head', 'mytheme_add_favicon' );
-function mytheme_add_favicon() {
-    echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_stylesheet_directory_uri() . '/favicon.ico" />';
-}
 
 /* Add Wordpress Documentation Page */
 add_action( 'admin_menu', 'ebow_wp_faq' );
