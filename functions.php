@@ -6,6 +6,9 @@ function mytheme_add_favicon() {
     echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_stylesheet_directory_uri() . '/favicon.ico" />';
 }
 
+/* Theme Support */
+add_theme_support('post-thumbnails');
+
 /* Show Page Template */
 add_action('wp_head', 'show_template');
 function show_template() {
