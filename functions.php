@@ -101,6 +101,36 @@ function codex_custom_init() {
 }
 add_action( 'init', 'codex_custom_init' );
 
+/* Custom Taxonomies */
+add_action( 'init', 'create_resources_taxonomies', 0 );
+function create_resources_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              	=> _x( 'Custom_Taxonomy_Name', 'taxonomy general name' ),
+		'singular_name'     	=> _x( 'Custom_Taxonomy_Name', 'taxonomy singular name' ),
+		'search_items'      	=> __( 'Search Custom_Taxonomy_Name' ),
+		'all_items'         	=> __( 'All Custom_Taxonomy_Name' ),
+		'parent_item'       	=> __( 'Parent Custom_Taxonomy_Name' ),
+		'parent_item_colon' 	=> __( 'Parent Custom_Taxonomy_Name:' ),
+		'edit_item'         	=> __( 'Edit Custom_Taxonomy_Name' ),
+		'update_item'       	=> __( 'Update Custom_Taxonomy_Name' ),
+		'add_new_item'      	=> __( 'Add New Custom_Taxonomy_Name' ),
+		'new_item_name'     	=> __( 'New Custom_Taxonomy_Name Name' ),
+		'menu_name'         	=> __( 'Custom_Taxonomy_Name' ),
+	);
+
+	$args = array(
+		'hierarchical'      	=> true, // Tags if its false
+		'labels'            	=> $labels,
+		'show_ui'           	=> true,
+		'show_admin_column' 	=> true,
+		'query_var'         	=> true,
+		'rewrite'           	=> array( 'slug' => 'resource-categories' ),
+	);
+
+    register_taxonomy( 'custom_taxonomy_name', array( 'post_type_name' ), $args );
+}
+
 /* Custom Post Image Sizes */
 add_image_size( 'custom-image-name', 651, 362, true ); // Hard cropped
 
